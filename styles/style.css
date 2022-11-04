@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(42, 42, 42);
+    width: 100%;
+    height: 900px;
+}
+
+.opwiy {
+    background-color: azure;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(74, 189, 255);
+}
+
+.container {
+    padding: 0;
+
+}
+
+.player_img {
+    width: 500px;
+    margin: 10px;
+    border-radius: 20px;
+    background: url(../musics/music.mp3);
+}
+.player__icons{
+    display: flex;
+    justify-content: space-around;
+}
+.iconka__opwiy {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: 300;
+    color: rgb(40, 40, 40);
+    margin: 20px;
+
+    cursor: pointer;
+}
+.music-ss{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.player__progers {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    align-items: center;
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+.player-duration {
+    cursor: pointer;
+    background: black;
+    width: 100%;
+    height: 5px;
+    margin: 0 10px;
+}
+
+.player-time {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    width: 50px;
+}
+
+.player-line {
+    height: 100%;
+    width: 40%;
+    background: green;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.player-volume{
+    display: flex;
+    
+}
+.player-ruler{
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background: green;
+}
+.player__volume-range {
+    cursor: pointer;
+}
+
+
+.iconkas {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
