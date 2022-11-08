@@ -80,7 +80,7 @@ body {
 
 .player-line {
     height: 100%;
-    width: 40%;
+    width: 0%;
     background: green;
     display: flex;
     justify-content: flex-end;
@@ -106,5 +106,10 @@ body {
     display: flex;
     justify-content: space-between;
     
+}
+.music-ss{
+    color: blueviolet;
+    font-size: 50px;
+    font-weight: 100;
 }
 

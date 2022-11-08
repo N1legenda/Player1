@@ -12,11 +12,11 @@ const volumeIcon = document.querySelector('.player-icon');
 
 
 const audios = [
-    "../player 3/musics/music.mp3",
+  "../player 3/musics/music.mp3",
     "../player 3/musics/mp3.mp3",
     "../player 3/musics/Halsey - Without Me (Lyrics).mp3",
-    "../player 3/musics/peacebass]   Miyagi   Эндшпиль.mp3",
-]
+   "../player 3/musics/peacebass]   Miyagi   Эндшпиль.mp3",
+ ]
 
 let countMusic = 0;
 let audio = new Audio(audios[countMusic]);
@@ -37,21 +37,24 @@ function audioplay() {
 
 
 function formatTime(time) {
+    const noll = (num) => num < 10 ? '0'+num : num
     let hour = Math.trunc(time / 3600)
     time = time - (hour * 3600)
     let min = Math.trunc(time / 60)
     time = time - (min * 60)
-    return time
+    let sec = Math.trunc(time)
+    return `${noll(min)}:${noll(sec)}`
 }
 
 function start() {
     setInterval(() => {
-        playerStart.innerHTML += formatTime(audio.currentTime)
+        playerStart.innerHTML = formatTime(audio.currentTime)
+        timeFormatter();
     }, 1000);
 }
 
 function end() {
-    playerEnd.innerHTML += formatTime(audio.duration)
+    playerEnd.innerHTML = formatTime(audio.duration)
 }
 
 volumeRage.addEventListener('click', function (e) {
@@ -87,6 +90,17 @@ function audioPrev() {
     audio = new Audio(audios[countMusic]);
     audio.play();
 }
+
+duration.addEventListener('click' , function (e) {
+    let audioTime = (e.offsetX / duration.clientWidth) * audio.duration
+    audio.currentTime = audioTime
+})
+
+const timeFormatter = () => {
+    line.style.width = ((audio.currentTime / audio.duration) * 100) + "%";
+
+}
+
 
 play.addEventListener("click", audioplay);
 next.addEventListener("click", audioNext);
