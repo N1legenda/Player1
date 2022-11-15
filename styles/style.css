@@ -52,8 +52,14 @@ body {
     justify-content: center;
     font-size: 30px;
     font-weight: 700;
+    color: linear-gradient(90deg, #69cf17 50%, #b2b216 70%);
+    animation: headerBg 2s linear infinite;
 }
-
+@keyframes headerBg {
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
 .player__progers {
     display: flex;
     justify-content: space-between;
